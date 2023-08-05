@@ -4,11 +4,11 @@ Crypto currencies Telegram bot
  
  <b>Private Chat Commands:</b>
  
- coin [coin_name]   <i>show balance</i>\n<i>[Example: /coin btc]</i>
+ coin [coin_name]   <i>show balance</i> <i>[Example: /coin btc]</i>
  
- pair [pair_name]   <i>show balance of pair</i>\n<i>[Example: /pair btcusdt] <b>Binance only</b></i>
+ pair [pair_name]   <i>show balance of pair</i> <i>[Example: /pair btcusdt] <b>Binance only</b></i>
  
- alert coin_name > or &lt; price  <i>\n[Example: /alert btc > 50000]</i>
+ alert coin_name > or &lt; price  <i> [Example: /alert btc > 50000]</i>
  
  alerts show all alerts and allow you to delete
  
