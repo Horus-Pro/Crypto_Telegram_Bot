@@ -35,9 +35,10 @@ logger.addHandler(debuglogHandler)
 logger.addHandler(logHandler)
 logger.addHandler(errorLogHandler)
 
-bot_key = '5001354017:AAFQrufgMiv0r-DFPvh0Mpfj15D-v7RTt14'
-bot_name = 'CryptoVerse [Bot] 🤖'
-bot_link = '@CryptoVerse_RoBot'
+bot_key = 'Telegram bot key here'
+bot_name = 'Bot Name'
+bot_link = 'Bot Telegram Link'
+telegram_user = "Put your telegram user code here"
 
 def dateandtime():
     date_time = datetime.now()
@@ -1002,7 +1003,7 @@ def stop(update: Update, context: CallbackContext) -> None:
     text = f"🔴 {bot_name} shutdown.\nPID: {os.getpid()} - signal: {signal.SIGINT}"
     logging.info(f"{text}\n{dateandtime()} Telegram message: {update.message}")
     print(f"{dateandtime()} {text}\n{dateandtime()} Telegram message: {update.message}")
-    update.message.bot.send_message(chat_id=597489330, text=text)
+    update.message.bot.send_message(chat_id=telegram_user, text=text)
     os.kill(os.getpid(), signal.SIGINT)
     #threading.Thread(target=shutdown).start()
 
@@ -1016,7 +1017,7 @@ def main():
     start = f"🟢 {bot_name} started... PID: {os.getpid()}"
     logging.info(start)
     print(f"{dateandtime()} {start}")
-    send_update(597489330, start)
+    send_update(telegram_user, start)
     connection()
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start_command))
