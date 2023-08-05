@@ -86,9 +86,9 @@ def sample_responses(input_text):
 
 def users(UserID, username, first_name, last_name, language_code):
     mydb = mysql.connector.connect(
-        host="160.153.131.153",
-        user="SamuraiCrypto",
-        password="#LvLC.$*ca0b",
+        host="Host Name",
+        user="Username",
+        password="Password",
         database="CryptoVerse_db"
     )
     mycursor = mydb.cursor()
@@ -112,9 +112,9 @@ def users(UserID, username, first_name, last_name, language_code):
 
 def groups(group_id, group_username, group_name, group_type):
     mydb = mysql.connector.connect(
-        host="160.153.131.153",
-        user="SamuraiCrypto",
-        password="#LvLC.$*ca0b",
+        host="Host Name",
+        user="Username",
+        password="Password",
         database="CryptoVerse_db"
     )
     mycursor = mydb.cursor()
@@ -138,9 +138,9 @@ def groups(group_id, group_username, group_name, group_type):
 
 def check_user(UserID):
     mydb = mysql.connector.connect(
-        host="160.153.131.153",
-        user="SamuraiCrypto",
-        password="#LvLC.$*ca0b",
+        host="Host Name",
+        user="Username",
+        password="Password",
         database="CryptoVerse_db"
     )
     mycursor = mydb.cursor()
@@ -244,9 +244,9 @@ def hash_text(update, context):
         if update.effective_user.id in get_admin_ids(context.bot, update.message.chat_id):
             if "#signals" in text:
                     mydb = mysql.connector.connect(
-                        host="160.153.131.153",
-                        user="SamuraiCrypto",
-                        password="#LvLC.$*ca0b",
+                        host="Host Name",
+                        user="Username",
+                        password="Password",
                         database="CryptoVerse_db"
                     )
                     mycursor = mydb.cursor()
@@ -285,9 +285,9 @@ def hash_text(update, context):
             if "#ideas" in text:
                     #update.message.bot.forward_message(chat_id=user['id'], from_chat_id=update.message.chat.id,message_id=message_id)
                     mydb = mysql.connector.connect(
-                        host="160.153.131.153",
-                        user="SamuraiCrypto",
-                        password="#LvLC.$*ca0b",
+                        host="Host Name",
+                        user="Username",
+                        password="Password",
                         database="CryptoVerse_db"
                     )
                     mycursor = mydb.cursor()
@@ -326,9 +326,9 @@ def hash_text(update, context):
             if "#notice" in text:
                     #update.message.bot.forward_message(chat_id=user['id'], from_chat_id=update.message.chat.id,message_id=message_id)
                     mydb = mysql.connector.connect(
-                        host="160.153.131.153",
-                        user="SamuraiCrypto",
-                        password="#LvLC.$*ca0b",
+                        host="Host Name",
+                        user="Username",
+                        password="Password",
                         database="CryptoVerse_db"
                     )
                     mycursor = mydb.cursor()
@@ -393,9 +393,9 @@ def hash_media(update, context):
             if "#signals" in text:
                     #update.message.bot.forward_message(chat_id=user['id'], from_chat_id=update.message.chat.id,message_id=message_id)
                     mydb = mysql.connector.connect(
-                        host="160.153.131.153",
-                        user="SamuraiCrypto",
-                        password="#LvLC.$*ca0b",
+                        host="Host Name",
+                        user="Username",
+                        password="Password",
                         database="CryptoVerse_db"
                     )
                     mycursor = mydb.cursor()
@@ -434,9 +434,9 @@ def hash_media(update, context):
             if "#ideas" in text:
                     #update.message.bot.forward_message(chat_id=user['id'], from_chat_id=update.message.chat.id,message_id=message_id)
                     mydb = mysql.connector.connect(
-                        host="160.153.131.153",
-                        user="SamuraiCrypto",
-                        password="#LvLC.$*ca0b",
+                        host="Host Name",
+                        user="Username",
+                        password="Password",
                         database="CryptoVerse_db"
                     )
                     mycursor = mydb.cursor()
@@ -475,9 +475,9 @@ def hash_media(update, context):
             if "#notice" in text:
                 # update.message.bot.forward_message(chat_id=user['id'], from_chat_id=update.message.chat.id,message_id=message_id)
                 mydb = mysql.connector.connect(
-                    host="160.153.131.153",
-                    user="SamuraiCrypto",
-                    password="#LvLC.$*ca0b",
+                    host="Host Name",
+                    user="Username",
+                    password="Password",
                     database="CryptoVerse_db"
                 )
                 mycursor = mydb.cursor()
@@ -638,9 +638,9 @@ def set_alert_command(update, context):
 
                     if sign == ">" or sign == "<":
                         mydb = mysql.connector.connect(
-                            host="160.153.131.153",
-                            user="SamuraiCrypto",
-                            password="#LvLC.$*ca0b",
+                            host="Host Name",
+                            user="Username",
+                            password="Password",
                             database="CryptoVerse_db"
                         )
                         mycursor = mydb.cursor()
@@ -691,9 +691,9 @@ def alert_list_command(update: Update, context: CallbackContext) -> None:
     is_group = update.message['chat']['type']
     if is_group == "private":
         mydb = mysql.connector.connect(
-            host="160.153.131.153",
-            user="SamuraiCrypto",
-            password="#LvLC.$*ca0b",
+            host="Host Name",
+            user="Username",
+            password="Password",
             database="CryptoVerse_db"
         )
         mycursor = mydb.cursor()
@@ -736,9 +736,9 @@ def button(update: Update, context: CallbackContext) -> None:
     query.answer()
     query.edit_message_text(text=f"✅ Alert has been deleted")
     mydb = mysql.connector.connect(
-        host="160.153.131.153",
-        user="SamuraiCrypto",
-        password="#LvLC.$*ca0b",
+        host="Host Name",
+        user="Username",
+        password="Password",
         database="CryptoVerse_db"
     )
     mycursor = mydb.cursor()
@@ -763,9 +763,9 @@ def btceth_notification_command(update, context):
             onoff = context.args[0].lower()
             if onoff == "on":
                 mydb = mysql.connector.connect(
-                    host="160.153.131.153",
-                    user="SamuraiCrypto",
-                    password="#LvLC.$*ca0b",
+                    host="Host Name",
+                    user="Username",
+                    password="Password",
                     database="CryptoVerse_db"
                 )
                 mycursor = mydb.cursor()
@@ -776,9 +776,9 @@ def btceth_notification_command(update, context):
                 response = f"🟢 #BTC & #ETH notifications turned on."
             elif onoff == "off":
                 mydb = mysql.connector.connect(
-                    host="160.153.131.153",
-                    user="SamuraiCrypto",
-                    password="#LvLC.$*ca0b",
+                    host="Host Name",
+                    user="Username",
+                    password="Password",
                     database="CryptoVerse_db"
                 )
                 mycursor = mydb.cursor()
@@ -822,9 +822,9 @@ def signals_command(update, context):
         UserID = user['id']
         if check_user(UserID) == True:
             mydb = mysql.connector.connect(
-                host="160.153.131.153",
-                user="SamuraiCrypto",
-                password="#LvLC.$*ca0b",
+                host="Host Name",
+                user="Username",
+                password="Password",
                 database="CryptoVerse_db"
             )
             mycursor = mydb.cursor()
@@ -870,9 +870,9 @@ def ideas_command(update, context):
         UserID = user['id']
         if check_user(UserID) == True:
             mydb = mysql.connector.connect(
-                host="160.153.131.153",
-                user="SamuraiCrypto",
-                password="#LvLC.$*ca0b",
+                host="Host Name",
+                user="Username",
+                password="Password",
                 database="CryptoVerse_db"
             )
             mycursor = mydb.cursor()
@@ -918,9 +918,9 @@ def del_notice_command(update, context):
         if update.effective_user.id in get_admin_ids(context.bot, update.message.chat_id):
             UserID = user['id']
             mydb = mysql.connector.connect(
-                host="160.153.131.153",
-                user="SamuraiCrypto",
-                password="#LvLC.$*ca0b",
+                host="Host Name",
+                user="Username",
+                password="Password",
                 database="CryptoVerse_db"
                 )
             mycursor = mydb.cursor()
@@ -964,9 +964,9 @@ def delall_notice_command(update, context):
             UserID = user['id']
             if creator_status['user'] == user:
                 mydb = mysql.connector.connect(
-                    host="160.153.131.153",
-                    user="SamuraiCrypto",
-                    password="#LvLC.$*ca0b",
+                    host="Host Name",
+                    user="Username",
+                    password="Password",
                     database="CryptoVerse_db"
                     )
                 mycursor = mydb.cursor()
